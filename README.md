@@ -12,7 +12,7 @@ Setup:
 2. Substitute (Raw Mark / 100)
 3. Prediction will be printed on the terminal as well as MAE and R^2 values.
 
-Example in use:
+Example in use for English Advanced:
 
 <img width="476" height="358" alt="Screenshot 2026-08-26 211940" src="https://github.com/user-attachments/assets/b3b32a15-6950-407d-a0a5-afc716608afc" />
 
