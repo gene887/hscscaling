@@ -5,7 +5,7 @@ from numpy.polynomial import Polynomial
 from sklearn.metrics import mean_absolute_error, r2_score
 
 def predict_hsc_mark(raw_mark):
-    df = pd.read_csv("mx1.csv")
+    df = pd.read_csv("phys.csv")
 
     x = np.array(df["Raw Mark"].tolist())
     y = np.array(df["HSC Mark"].tolist())
