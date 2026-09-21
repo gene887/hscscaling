@@ -5,7 +5,7 @@ from numpy.polynomial import Polynomial
 from sklearn.metrics import mean_absolute_error, r2_score
 
 def predict_hsc_mark(raw_mark):
-    df = pd.read_csv("eadv.csv")
+    df = pd.read_csv("anc.csv")
 
     x = np.array(df["Raw Mark"].tolist())
     y = np.array(df["HSC Mark"].tolist())
@@ -22,13 +22,13 @@ def predict_hsc_mark(raw_mark):
     print("R2: ", r2)
 
     prediction = model(raw_mark)
-    print(f"A raw mark of {raw_mark} would scale to: {prediction:.2f}")
+    print("Prediction: ", prediction)
 
     # linspace provides evenly spaced numbers over a specified interval
     curvy_line = np.linspace((df["Raw Mark"].min() // 10) * 10, 100, 1000)
 
     #plotting
-    plt.title("Raw Mark to HSC Mark Prediction for English Advanced")
+    plt.title("Raw Mark to HSC Mark Prediction for Ancient History")
     plt.xlabel("Raw Mark")
     plt.ylabel("HSC Mark")
     plt.scatter(x, y, c='blue')
@@ -38,4 +38,4 @@ def predict_hsc_mark(raw_mark):
     plt.show()
 
 # ENTER YOUR RAW MARK HERE
-predict_hsc_mark(78)
+predict_hsc_mark(94)
